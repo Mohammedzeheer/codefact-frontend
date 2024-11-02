@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addStudio } from '../store/slices/studioSlice';
-import { ArrowLeft, Upload, X, Image as ImageIcon } from 'lucide-react';
+import { ArrowLeft, X, Image as ImageIcon } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 
 const AddStudio = () => {
@@ -31,7 +31,7 @@ const AddStudio = () => {
       ...prev,
       [name]: value
     }));
-    
+
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -40,9 +40,9 @@ const AddStudio = () => {
     }
   };
 
-  const CLOUDINARY_CLOUD_NAME = 'dah6aafle';
-  const CLOUDINARY_UPLOAD_PRESET = 'codefact';
-  
+  const CLOUDINARY_CLOUD_NAME = 'dah6aafle'
+  const CLOUDINARY_UPLOAD_PRESET = 'codefact'
+
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -132,9 +132,8 @@ const AddStudio = () => {
         required={required}
         value={formData[name]}
         onChange={handleChange}
-        className={`w-full p-2 border ${
-          errors[name] ? 'border-red-500' : 'border-gray-300'
-        } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
+        className={`w-full p-2 border ${errors[name] ? 'border-red-500' : 'border-gray-300'
+          } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
       />
       {errors[name] && (
         <p className="mt-1 text-sm text-red-500">{errors[name]}</p>
@@ -219,7 +218,7 @@ const AddStudio = () => {
             {errors.submit}
           </div>
         )}
-        
+
         <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow p-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column - Image Upload */}
@@ -250,9 +249,8 @@ const AddStudio = () => {
                   value={formData.description}
                   onChange={handleChange}
                   rows={4}
-                  className={`w-full p-2 border ${
-                    errors.description ? 'border-red-500' : 'border-gray-300'
-                  } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
+                  className={`w-full p-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'
+                    } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
                 />
                 {errors.description && (
                   <p className="mt-1 text-sm text-red-500">{errors.description}</p>
@@ -291,9 +289,8 @@ const AddStudio = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors ${
-                    loading ? 'opacity-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                 >
                   {loading ? 'Adding Studio...' : 'Add Studio'}
                 </button>
@@ -307,5 +304,3 @@ const AddStudio = () => {
 };
 
 export default AddStudio;
-
-

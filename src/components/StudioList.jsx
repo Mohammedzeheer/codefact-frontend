@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchStudios } from '../store/slices/studioSlice';
-import { Star, MapPin, Calendar, Clock, IndianRupee, Search, Plus } from 'lucide-react';
+import { Star, MapPin, IndianRupee, Search, Plus } from 'lucide-react';
 
 export default function StudioListingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -37,11 +37,6 @@ export default function StudioListingPage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="text-xl font-bold">STUDIO HUB</div>
           <div className="flex items-center space-x-4">
-            {/* <nav className="hidden md:flex space-x-4">
-              <a  className="text-gray-600 hover:text-gray-900">Home</a>
-              <a  className="text-gray-600 hover:text-gray-900">Categories</a>
-              <a  className="text-gray-600 hover:text-gray-900">Contact Us</a>
-            </nav> */}
             <div className="relative">
               <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400"
               />
@@ -235,8 +230,6 @@ export default function StudioListingPage() {
                           <span className="ml-2 text-xs">Equipment Available</span>
                         </div>
                       )}
-
-
 
                       <div className="flex justify-between items-center mt-auto gap-2 text-sm">
                         <button

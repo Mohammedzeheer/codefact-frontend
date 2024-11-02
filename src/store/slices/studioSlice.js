@@ -6,6 +6,7 @@ export const fetchStudios = createAsyncThunk(
   '/api/studios/getStudios',
   async (filters) => {
     const response = await studioApi.get('/api/studios/getStudios', { params: filters });
+    console.log(`response---------------`,response)
     return response.data.studios;
   }
 );
