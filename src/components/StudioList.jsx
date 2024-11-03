@@ -14,7 +14,7 @@ export default function StudioListingPage() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { studios = [], loading } = useSelector((state) => state.studio);
+  const { studios = [] } = useSelector((state) => state.studio);
   const [filters, setFilters] = useState({
     location: '',
     priceRange: '',
@@ -119,8 +119,8 @@ export default function StudioListingPage() {
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full whitespace-nowrap ${selectedCategory === category
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
+                ? 'bg-blue-500 text-white'
+                : 'bg-white text-gray-600 hover:bg-gray-100'
                 }`}
             >
               {category}
