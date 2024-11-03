@@ -133,7 +133,7 @@ const AddStudio = () => {
         value={formData[name]}
         onChange={handleChange}
         className={`w-full p-2 border ${errors[name] ? 'border-red-500' : 'border-gray-300'
-          } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
+          } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
       />
       {errors[name] && (
         <p className="mt-1 text-sm text-red-500">{errors[name]}</p>
@@ -250,7 +250,7 @@ const AddStudio = () => {
                   onChange={handleChange}
                   rows={4}
                   className={`w-full p-2 border ${errors.description ? 'border-red-500' : 'border-gray-300'
-                    } rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500`}
+                    } rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500`}
                 />
                 {errors.description && (
                   <p className="mt-1 text-sm text-red-500">{errors.description}</p>
@@ -271,7 +271,7 @@ const AddStudio = () => {
                   value={formData.amenities.join(', ')}
                   onChange={handleAmenitiesChange}
                   placeholder="e.g., Lighting equipment, Backdrop, Makeup room"
-                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
@@ -289,7 +289,7 @@ const AddStudio = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                  className={`px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors ${loading ? 'opacity-50 cursor-not-allowed' : ''
                     }`}
                 >
                   {loading ? 'Adding Studio...' : 'Add Studio'}
