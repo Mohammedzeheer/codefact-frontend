@@ -24,7 +24,7 @@ const CardTitle = React.forwardRef(({ className, children, ...props }, ref) => {
   if (!children) {
     return null;
   }
-  
+
   return (
     <h3
       ref={ref}
@@ -61,8 +61,8 @@ const CardContent = React.forwardRef(({ className, children, ...props }, ref) =>
   }
 
   return (
-    <div 
-      ref={ref} 
+    <div
+      ref={ref}
       className={`p-6 pt-0 ${className}`}
       role="main"
       {...props}
