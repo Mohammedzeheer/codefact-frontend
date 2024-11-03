@@ -2,8 +2,8 @@
 import axios from 'axios';
 
 // Base URLs for different services
-const MAIN_SERVICE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-const STUDIO_SERVICE_URL = process.env.REACT_APP_STUDIO_URL || 'http://localhost:5001';
+const MAIN_SERVICE_URL = process.env.REACT_APP_API_URL || 'https://codefact-user-mangement.onrender.com';
+const STUDIO_SERVICE_URL = process.env.REACT_APP_STUDIO_URL || 'https://codefact-studio-managemnet.onrender.com';
 
 // Create API instances for different services 
 const createApiInstance = (baseURL) => {
